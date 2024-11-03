@@ -7,7 +7,7 @@ export default function AllBooks() {
   const { fetchData, setFetchData } = useContext(AllData);
   useEffect(() => {
     setTimeout(() => {
-      axios.get("booksData.json").then((res) => {
+      axios.get("/booksData.json").then((res) => {
         setFetchData(res.data);
       });
     }, 3000);
