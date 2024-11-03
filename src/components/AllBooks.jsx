@@ -12,7 +12,7 @@ export default function AllBooks() {
       });
     }, 3000);
   }, []);
-  console.log(fetchData);
+
   return (
     <section className="mt-10">
       <h1 className="text-3xl font-PD font-bold text-center mt-3">Books</h1>

@@ -8,9 +8,20 @@ import { Outlet } from "react-router-dom";
 
 function App() {
   const [fetchData, setFetchData] = useState([]);
+  const [bookDetails, setBookDetails] = useState({});
+  const [readBook, setReadBook] = useState([]);
   return (
     <>
-      <AllData.Provider value={{ fetchData, setFetchData }}>
+      <AllData.Provider
+        value={{
+          readBook,
+          setReadBook,
+          fetchData,
+          setFetchData,
+          bookDetails,
+          setBookDetails,
+        }}
+      >
         <main className="max-w-[1440px] mx-auto">
           <Nav />
           <Outlet />
